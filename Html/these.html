@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theses | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    body { margin:0; 
+      font-family: Arial, sans-serif; 
+      background:#f4f6f8; 
+      color:#333; }
+        .container {
+            width: 95%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 0px solid #003366;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+       transition: 0.3s;
+    }
+    .section:hover { transform: translateY(-5px); }
+
+        .section h2 {
+            color: #003366;
+            margin-top: 0;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .links a {
+            display: block;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .nav-links { flex-direction: column; gap:10px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1>Tertiary Care Campus Library</h1>
+</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- hamburger -->
+     <div class="hamburger" onclick="toggleMenu()">☰
+     </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Library Services</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html">Journals</a></li>
+          <li><a href="these.html" class="active">Theses</a></li>
+          <li><a href="resource.html">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Theses Section -->
+<div class="container">
+
+    <div class="section">
+        <h2>About Theses & Dissertations</h2>
+        <p>
+            The University Library provides access to undergraduate, postgraduate, and doctoral
+            theses and dissertations in digital format. These resources support academic research,
+            preserve institutional knowledge, and promote scholarly communication.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Available Collections</h2>
+        <ul>
+            <li>Undergraduate Research Projects</li>
+            <li>Master’s Theses</li>
+            <li>Doctoral Dissertations (PhD)</li>
+            <li>Faculty Supervised Research</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Access Options</h2>
+        <ul>
+            <li>On-campus access via university network</li>
+            <li>Remote access through institutional login</li>
+            <li>Open-access theses (where permitted)</li>
+        </ul>
+    </div>
+
+    <div class="section links">
+        <h2>Search & Download</h2>
+        <a href="#" target="_blank">🔍 Institutional Repository</a>
+        <a href="#" target="_blank">📚 Digital Theses Archive</a>
+        <a href="#" target="_blank">🎓 National Theses Database</a>
+    </div>
+
+    <div class="section">
+        <h2>Usage Policy</h2>
+        <ul>
+            <li>For academic and research use only</li>
+            <li>Proper citation is required</li>
+            <li>Plagiarism is strictly prohibited</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+<section class="Quick-access"> 
+  <center><h2 style="color: white;">Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+        <center><h3>Follow Us</h3></center> 
+        <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+        <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+        <a href=" https://t.me/wollouniversity_official." target="_blank" >
+        <img src="../Images/tele.png" width="30px" height="30px"> </a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a> 
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>

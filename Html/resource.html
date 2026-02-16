@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Resources | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    body {
+       margin:0; 
+       font-family: Arial, sans-serif; 
+       background:#f4f6f8; 
+       color:#333; }
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px;
+        }
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 0px solid #003366;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+               transition: 0.3s;
+    }
+    .section:hover { transform: translateY(-5px); }
+        .section h2 {
+            margin-top: 0;
+            color: #003366;
+            font-size: 20px;
+            text-align: left;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        .check {
+            color:Navy;
+            font-weight: bold;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* Clickable links */
+        a.resource-link {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.resource-link:hover {
+            text-decoration: underline;
+            color: #0055aa;
+        }
+         /* Responsive */
+    @media(max-width:768px){
+      .nav-links { flex-direction: column; gap:10px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1> Tertiary Care Campus Library</h1>
+</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- hamburger -->
+     <div class="hamburger" onclick="toggleMenu()">☰
+     </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Library Services</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html">Journals</a></li>
+          <li><a href="these.html">Theses</a></li>
+          <li><a href="resource.html" class="active">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- E-Resources Section -->
+<div class="container">
+    <div class="section">
+        <h2>Access to Digital Information</h2>
+        <ul>
+            <li><a class="resource-link" href="#">E-Books Collection</a></li>
+            <li><a class="resource-link" href="#">E-Journals</a></li>
+            <li><a class="resource-link" href="#">Online Databases</a></li>
+            <li><a class="resource-link" href="#">Theses & Dissertations</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2> Support for Teaching, Learning & Research</h2>
+        <ul>
+            <li>Student coursework support</li>
+            <li>Faculty teaching materials</li>
+            <li> <a href="https://core.ac.uk"> Research & publication resources</a></li>
+        </ul>
+        <p class="check">Essential for undergraduate, postgraduate & research programs</p>
+    </div>
+    <div class="section">
+        <h2> Remote & On-Campus Accessibility</h2>
+        <ul>
+            <li>Campus network access</li>
+            <li>Remote access (VPN / Institutional login)</li>
+        </ul>
+        <p class="check">Supports distance learning</p>
+    </div>
+    <div class="section">
+        <h2> Up-to-Date Academic Content</h2>
+        <ul>
+            <li>Latest journal issues</li>
+            <li>Current textbook editions</li>
+        </ul>
+        <p class="check">Ensures evidence-based education</p>
+    </div>
+    <div class="section">
+        <h2>Accreditation & Quality Standards</h2>
+        <ul>
+            <li>University accreditation bodies</li>
+            <li>Professional councils (Medical, Nursing, Pharmacy)</li>
+        </ul>
+        <p class="check">Demonstrates library adequacy</p>
+    </div>
+    <div class="section">
+        <h2> Discipline-Specific Databases (Health Sciences)</h2>
+        <ul>
+            <li><a class="resource-link" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a></li>
+            <li><a class="resource-link" href="https://www.who.int/hinari" target="_blank">HINARI</a></li>
+            <li><a class="resource-link" href="https://www.cochranelibrary.com/" target="_blank">Cochrane Library</a></li>
+            <li><a class="resource-link" href="#" >Clinical Practice Guidelines</a></li>
+        </ul>
+        <p class="check">Supports evidence-based clinical practice</p>
+    </div>
+    <div class="section">
+        <h2>Preservation & Institutional Memory</h2>
+        <ul>
+            <li><a class="resource-link" href="#">Institutional Repository</a></li>
+            <li><a class="resource-link" href="#">Digitized Theses</a></li>
+        </ul>
+        <p class="check">Preserves academic output</p>
+    </div>
+    <div class="section">
+        <h2> Information Literacy & Skill Development</h2>
+        <ul>
+            <li>Online tutorials</li>
+            <li>Database training sessions</li>
+        </ul>
+    </div>
+</div>
+<footer>
+<section class="Quick-access"> 
+  <center><h2 style="color: white;">Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+         <h3>Follow Us</h3>
+         <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+         <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+         <a href=" https://t.me/wollouniversity_official." target="_blank" >
+         <img src="../Images/tele.png" width="30px" height="30px"> </a>
+         <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>  
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>
+
+

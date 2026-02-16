@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    /* Slider specific styles */
+    .slider-container {
+      width: 99%;
+      height: 600px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 6px;
+    }
+    .slider-track {
+  position: relative;
+  height: 100%;
+}
+
+.slider-track img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-track img.active {
+  opacity: 1;
+}
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.45);
+      color: white;
+      border: none;
+      font-size: 35px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .slider-btn:hover { 
+    background: rgba(0,0,0,0.7); }
+    .prev { left: 15px; }
+    .next { right: 15px; }
+    /* Hero padding */
+    .hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 👈 same row */
+  gap: 30px;
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+    .hero {
+  display: flex;
+  flex-direction: column;   /* 👈 column inside each hero */
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgb(226, 238, 238);
+  color: black;
+  transition: 0.3s;
+}
+.hero:hover {transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+  .hero-row {
+    grid-template-columns: 1fr;   /* 👈 stack vertically */
+  }
+}
+    /* Image grid */
+    .imgage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-left: 20px;
+      margin: 20px;
+          transition: 0.3s;
+}
+    .imgage img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    /* ===== Mobile responsive tweaks ===== */
+    @media (max-width:768px){
+      .slider-container { height: 300px; }
+      .slider-btn { font-size: 25px; padding: 8px 12px; }
+      .hero { padding-left: 15px; padding-right: 15px; }
+      header h1 { font-size: clamp(18px,5vw,28px); }
+      .imgage { flex-direction: column; gap: 10px; padding-left: 10px; }
+      .imgage img { width: 100%; height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../Images/wu.png" alt="Wollo University Logo" align="left" width="250" height="80">
+    <h1>Tertiary Care Campus Library</h1>
+  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Library Services</a></li>
+        <li class="dropdown">
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="book.html">Books</a></li>
+            <li><a href="jornal.html">Journals</a></li>
+            <li><a href="these.html">Theses</a></li>
+            <li><a href="resource.html">E-Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">Search Catalog</a></li>
+        <li><a href="rule.html">Rules & Regulations</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Slider -->
+  <div class="cards">
+    <div class="slider-container">
+        <a href="image.html">
+      <div class="slider-track" id="sliderTrack">
+        <img src="../Images/photo_2.png" alt="CMHS Library">
+        <img src="../Images/at tita.png" alt="Wollo University Campus">
+        <img src="../Images/photo 1.png" alt="Library Interior">
+        <img src="../Images/photo2.png" alt="Reading Area">
+        <img src="../Images/dg.png" alt="Digital Library">
+        <img src="../Images/bo.png" alt="Books Collection">
+        <img src="../Images/Drs.png" alt="Digital Library">
+        <img src="../Images/best.jpg" alt="Books Collection">
+        <img src="../Images/gold.png" alt="Books Collection">
+        <img src="../Images/Tita .jpg" alt="Books Collection">
+      </div>
+      </a>
+    <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="slider-btn next" onclick="nextSlide()">&#10095;</button> 
+    </div>
+  </div>
+  <!-- Hero Section -->
+   <section class="hero-row">
+  <section class="hero">
+    <h1>Welcome to CMHS Library</h1>
+    <p>Your premier academic hub for Medicine, Nursing, Pharmacy, 
+      Public Health, Midwifery, and Medical Laboratory Sciences at
+       Wollo University – Tita Campus. We provide comprehensive 
+       resources, state-of-the-art facilities, and expert support 
+       for your academic and research needs.</p>
+    </section>
+  <!-- Announcements -->
+ <section class="hero">
+    <h3>Latest Announcements</h3>
+    <ul>
+      <li>New medical textbooks available in the library.</li>
+      <li>Library orientation for new students: Jan 10, 2026.</li>
+      <li>Online journals access updated for 2025.</li>
+    </ul>
+  </section>
+  <section class="hero">
+  <h2>Opening Hours</h2>
+The library is open all day and night, every day of the week, 
+for students, faculty, and staff to study, do research, 
+and use resources. It only closes on public or religious holidays.
+  </section>
+</section>
+  <!-- Image Grid -->
+   <center><h2>Library Gallery</h2></center>
+  <div class="imgage">
+    <a href="#"><img src="../Images/photo_2.png" alt=""></a>
+    <a href="#"><img src="../Images/at tita.png" alt=""></a>
+    <a href="#"><img src="../Images/dg.png" alt=""></a>
+    <a href="#"><img src="../Images/bo.png" alt=""></a>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <section class="Quick-access">
+      <center><h2>Quick Access</h2></center>
+      <div class="Q-access">
+        <div class="access"><h4><a href="search.html">Search Catalog</a></h4><p>Quickly search for books, journals, and theses.</p></div>
+        <div class="access"><h4><a href="book.html">Books</a></h4><p>Explore our printed and reference books.</p></div>
+        <div class="access"><h4><a href="jornal.html">Journals</a></h4><p>Access academic and research journals.</p></div>
+        <div class="access"><h4><a href="resource.html">E-Resources</a></h4><p>Find online textbooks, PDFs, and databases.</p></div>
+        <div class="footer-container">
+          <h3>Follow Us</h3>
+          <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+            <a href=" https://t.me/wollouniversity_official." target="_blank" >
+            <img src="../Images/tele.png" width="30px" height="30px"> </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>
+        </div>
+      </div>
+    </section>
+    &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+  </footer>
+  <script>
+    function toggleMenu(){
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  
+    const sliderContainer = document.querySelector(".slider-container");
+    const slides = document.querySelectorAll("#sliderTrack img");
+  
+    let currentIndex = 0;
+    let autoPlay;
+  
+    // Show first image
+    slides[currentIndex].classList.add("active");
+  
+    function getRandomIndex() {
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * slides.length);
+      } while (randomIndex === currentIndex);
+      return randomIndex;
+    }
+  
+    function showSlide(index) {
+      slides[currentIndex].classList.remove("active");
+      slides[index].classList.add("active");
+      currentIndex = index;
+    }
+  
+    function nextSlide() {
+      const randomIndex = getRandomIndex();
+      showSlide(randomIndex);
+    }
+  
+    function prevSlide() {
+      const randomIndex = getRandomIndex();
+      showSlide(randomIndex);
+    }
+  
+    function startAutoPlay() {
+      autoPlay = setInterval(nextSlide, 5000);
+    }
+  
+    function stopAutoPlay() {
+      clearInterval(autoPlay);
+    }
+  
+    // Pause on hover
+    sliderContainer.addEventListener("mouseenter", stopAutoPlay);
+    sliderContainer.addEventListener("mouseleave", startAutoPlay);
+  
+    startAutoPlay();
+  </script>
+  
+  
+  
+  
+</body>
+</html>

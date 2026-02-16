@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rules & Policies | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+body{
+  background: white;
+}
+        /* CONTAINER */
+        .container {
+          background-color: white;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+.rules-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap:20px;
+  margin-top:20px;
+}
+/*RULE CARD */
+.rule{
+  background:#ffffff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.rule:hover{
+  transform:translateY(-4px);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .rules-grid{
+    grid-template-columns:1fr;
+  }
+} 
+    /* Policy Cards */
+    .cards {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+    .card {
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-bottom:10px; color:#003366; }
+    .card p { line-height:1.5; }
+     /* RESPONSIVE DESIGN */
+
+     @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            ul {
+                margin-left: 15px;
+            }
+        }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1> Tertiary Care Campus Library</h1>
+</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- hamburger -->
+     <div class="hamburger" onclick="toggleMenu()">☰
+     </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Library Services</a></li>
+      <li class="dropdown">
+        <a href="#">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html">Journals</a></li>
+          <li><a href="these.html">Theses</a></li>
+          <li><a href="resource.html">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html" class="active">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+      <h2>Tertiary Care Campus Library Rules & Regulations</h2>
+      <div class="rules-grid">
+      <section class="rule">
+        <ol type="1" start="1">
+     <h3><li> Library Opening Hours</li></h3>
+      <ul>
+        <li>Tertiary Care Campus Library provides <strong>24-hour service</strong> from Monday to Sunday.</li>
+        <li>No service during Ethiopian public official holidays.</li>
+      </ul>
+     <h3> <li>General Rules</li></h3>
+      <ul>
+        <li>Smoking and use of mobile phones are strictly prohibited inside the library.</li>
+        <li>Consumption of food and drinks is not permitted.</li>
+        <li>No bags, umbrellas, parcels, etc. except files and books are allowed.</li>
+        <li>Storage facilities are provided at the library entrance.</li>
+        <li>All users must present books and items for inspection when leaving.</li>
+        <li>Silence and strict discipline must be maintained.</li>
+        <li>No user should disturb others during study.</li>
+        <li>Reservation of seats is not permitted.</li>
+        <li>Unattended books or items may be removed by library staff.</li>
+        <li>Users must be decently dressed and conduct themselves properly.</li>
+        <li>Library staff may ask users to leave for rule violations.</li>
+        <li>Library privileges may be suspended for rule infringement.</li>
+        <li>The library is not responsible for loss of personal belongings.</li>
+      </ul>
+      <h3><li> General Loan Rules</li></h3>
+      <ul>
+        <li>No materials may be taken out without proper loan recording.</li>
+        <li>Unauthorized removal of materials is a serious offense.</li>
+        <li>Borrowed materials must be returned on or before the due date.</li>
+        <li>Normal loan period is <strong>two weeks</strong>.</li>
+        <li>Loan periods may vary by material type or user category.</li>
+        <li>Overdue items must be cleared before borrowing again.</li>
+      </ul>
+      </ol>
+      </section>
+      </div>
+      <div class="rules-grid">
+      <section class="rule">
+         <ol type="1" start="4">
+      <h3> <li> Overdue, Fines, Loss & Damage</li></h3>
+      <ul>
+          <li>Books must be returned on or before the due date.</li>
+          <li>Fines may be imposed for overdue books.</li>
+          <li>Lost or damaged books must be replaced with the same or latest edition.</li>
+          <li>Lost books are charged at <strong>double the book value</strong>.</li>
+      </ul>
+        <h3><li> Overdue Books</li></h3>
+        <p>
+          Books must be returned by the due date or earlier if recalled by the Librarian.
+          Failure to do so is treated as a serious offense.
+        </p>
+        <p>
+          The library may send overdue notices but is not responsible for non-delivery.
+        </p>
+      <h3><li> Internet Room Rules</li></h3>
+      <ul>
+          <li>No games, music, or pornography.</li>
+          <li>No installation or removal of software.</li>
+          <li>Report technical problems to IT staff.</li>
+          <li>Computer usage time is allocated by the Digital Librarian.</li>
+      </ul>
+      <strong>Note:</strong> These rules protect the interests of all users.
+       <P>Failure to comply may lead to suspension or disqualification.</P>
+      <p> Rules may be modified from time to time.</P>
+ <!-- INTERNET ROOM RULES -->
+
+  <h3><li> Internet Room Rules</li></h3>
+  <ol>
+    <li>Do not use computers for:
+      <ul>
+        <li>Playing games</li>
+        <li>Playing music</li>
+        <li>Visiting pornography or related sites</li>
+      </ul>
+    </li>
+    <li>Do not install or uninstall any programs.</li>
+    <li>Report faulty equipment to IT or digital library staff.</li>
+    <li>Computer use is limited to allocated time.</li>
+  </ol>
+  </section>
+  </div>
+</div>
+<!-- Rules & Policies Section -->
+  <center><h2>Additional Policies</h2></center> 
+  <div class="cards">
+    <div class="card">
+      <h3>Borrowing Limits</h3>
+      <p>Students may borrow up to 5 books at a time, while faculty members may borrow up to 10 items.</p>
+    </div>
+    <div class="card">
+      <h3>Late Returns</h3>
+      <p>Late returns are subject to fines according to the university's library policy. Fines must be cleared before further borrowing.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Resources</h3>
+      <p>Access to e-resources is restricted to university students and staff. Login credentials should not be shared with others.</p>
+    </div>
+    <div class="card">
+      <h3>Study Rooms</h3>
+      <p>Group study rooms must be booked in advance. Users must leave the room clean and return furniture to its original arrangement.</p>
+    </div>
+  </div>
+<footer>
+<section class="Quick-access"> 
+  <center><h2 style="color: white;">Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+         <h3>Follow Us</h3>
+         <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+         <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+         <a href=" https://t.me/wollouniversity_official." target="_blank" >
+         <img src="../Images/tele.png" width="30px" height="30px"> </a>
+         <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>  
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>

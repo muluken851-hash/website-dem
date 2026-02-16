@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    body { margin:0; font-family: 
+          Arial, sans-serif; 
+          background:#f4f6f8; 
+          color:#333; }
+    /* Staff Section */
+    section { max-width:1200px; 
+          margin:auto; 
+          padding:30px 20px; }
+    h2 { 
+          color:#003366; 
+          margin-bottom:20px; 
+          text-align:center; }
+    /* Staff Cards */
+    .staff-cards {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+      margin-top:10px;
+    }
+    .card  {
+      background:#fff;
+      padding:20px;
+      border-radius:2px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      text-align:center;
+      transition:0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width:100%;
+      height:100%;
+      border-radius:1px;
+      object-fit:cover;
+      margin-bottom:5px;
+    }
+    .card h3 { color:#003366; margin-bottom:5px; }
+    .card p { margin:5px 0; font-size:0.95rem; }
+    /* Footer */
+    /* Responsive */
+    @media(max-width:768px){
+      .nav-links { flex-direction: column; gap:10px; }
+      .staff-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1> Tertiary Care Campus Library</h1>
+</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- hamburger -->
+     <div class="hamburger" onclick="toggleMenu()">☰
+     </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Library Services</a></li>
+      <li class="dropdown">
+        <a href="#">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html">Journals</a></li>
+          <li><a href="these.html">Theses</a></li>
+          <li><a href="resource.html">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Staff Section -->
+<section>
+  <h2>Some pictures </h2>
+  <class class="staff-cards">
+    <div class="card">
+      <img src="../Images/bo.png" alt="file image">
+    </div>
+    <div class="card">
+      <img src="../Images/tita photo.png" alt="file image"> 
+    </div>
+    <div class="card">
+      <img src="../Images/photo_2.png" alt="file image">
+    </div>
+    <div class="card">
+      <img src="../Images/photo2.png" alt="file image">
+    </div>
+    <div class="card">
+      <img src="../Images/best.jpg" alt="file image">
+    </div>
+    <div class="card">
+      <img src="../Images/study.png" alt="file image">
+    </div>
+    <div class="card">
+      <img src="../Images/at tita.png" alt="file image">
+    </div>
+<div class="card">
+<img src="../Images/Drs.png" alt="file image">
+    </div>
+    <div class="card">
+<img src="../Images/dg.png" alt="file image">
+    </div>
+    <div class="card">
+<img src="../Images/gold.png" alt="file image">
+    </div>
+  <img src="../Images/photo 1.png" width="300px" alt="file image ">
+  <img src="../Images/gambela.png" width="300px" alt="file image"> 
+<img src="../Images/tita photo.png" width="300px" alt="file image">
+  </div>
+  <div class="card">
+    <a href="home.html"><h2>←Back</h2></a>
+        </div>
+  </div>
+</section>
+
+<footer>
+<section class="Quick-access"> 
+  <center><h2 style="color: white;">Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+         <h3>Follow Us</h3>
+         <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+         <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+         <a href=" https://t.me/wollouniversity_official." target="_blank" >
+         <img src="../Images/tele.png" width="30px" height="30px"> </a>
+         <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a> 
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>

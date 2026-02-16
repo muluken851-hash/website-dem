@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    /* Page-specific styles */
+    body {
+      background: rgb(240, 235, 235); /* override global gradient for book page */
+    }
+
+    section { 
+      max-width: 1000px; 
+      margin: auto; 
+      padding: 20px; 
+    }
+
+    h3 { color: #003366; margin-bottom: 15px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+
+    /* Cards for books */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-left: 0px solid;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img { width: 80px; height: 100px; object-fit: cover; margin-bottom: 10px; }
+
+    .card h4 { margin: 10px 0; color: #003366; font-size: 1.1rem; }
+    .card p { font-size: 0.9rem; line-height: 1.3; }
+
+    /* Responsive adjustments */
+    @media (max-width:768px){
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../Images/wu.png" align="left" alt="Wollo University Logo" width="250" height="80">
+    <h1>Tertiary Care Campus Library</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Library Services</a></li>
+        <li class="dropdown">
+          <a href="#" class="active">Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="book.html" class="active">Books</a></li>
+            <li><a href="jornal.html">Journals</a></li>
+            <li><a href="these.html">Theses</a></li>
+            <li><a href="resource.html">E-Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">Search Catalog</a></li>
+        <li><a href="rule.html">Rules & Regulations</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Book Section -->
+  <section>
+    <h3>Book Access</h3>
+    <div class="cards">
+      <div class="card">
+        <a href="../Pdf/DBMS.pdf">
+          <img src="../Images/data.png" alt="DBMS Book">
+          <h4>Fundamentals of Database Systems</h4>
+        </a>
+        <p>This book introduces the fundamental concepts necessary for designing, using, and implementing database systems and applications. 1,029 pages</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/ETHIOPIA HEALTH SECTOR DEVELOPMENT PROGRAMME.pdf">
+          <img src="../Images/hs.png" alt="HSTP">
+          <h4>Ethiopia-HSTP-II.pdf</h4>
+        </a>
+        <p>Health Sector Transformation Plan II. HSTP II. 2020/21-2024/25. February 2021. 120 pages</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/Ethiopia National Reproductive Health Strategy 2006-2015.pdf">
+          <img src="../Images/enr.png" alt="ENRHS">
+          <h4>National Reproductive Health Strategy</h4>
+        </a>
+        <p>2006-2015. Social and institutional parameters affecting women's health. 46 pages</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/Tortora Anatomy and physiology 13th edit.pdf">
+          <img src="../Images/tor.png" alt="Anatomy">
+          <h4>Principles of Anatomy and Physiology, 13th Edition</h4>
+        </a>
+        <p>By D. Tortora. Comprehensive anatomy and physiology reference.</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/Oxford Practice Grammar with Answers.pdf">
+          <img src="../Images/ox.png" alt="Oxford Grammar">
+          <h4>Oxford Practice Grammar with Answers</h4>
+        </a>
+        <p>Second edition. Practical English grammar with exercises and answers.</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/SDG.pdf">
+          <img src="../Images/sd.png" alt="SDG Review">
+          <h4>Ethiopia's 2017 SDG Progress Review</h4>
+        </a>
+        <p>Voluntary National Review on SDGs, assessing commitments, ownership, and performance trends.</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/tutorial.pdf">
+          <img src="../Images/to.png" alt="C++ Tutorial">
+          <h4>C++ Language Tutorial</h4>
+        </a>
+        <p>Comprehensive C++ tutorials covering basics to advanced features (C++11 included).</p>
+      </div>
+
+      <div class="card">
+        <a href="../Pdf/RH-strategy-2016.pdf">
+          <img src="../Images/nrh.png" alt="National Reproductive Health Strategy">
+          <h4>National Reproductive Health Strategy 2020-2016</h4>
+        </a>
+        <p>Government of Ethiopia initiative to improve reproductive health status for women, men, and youth.</p>
+      </div>
+
+      <div class="card">
+        <a href="https://www.slideshare.net/slideshow/ehealth-100327253/100327253">
+          <img src="../Images/E-Health.png" alt="E-Health">
+          <h4>E-Health | PDF</h4>
+        </a>
+        <p>Benefits include time savings, insight into personal health, and reduced administrative burdens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <section class="Quick-access">
+      <center><h2>Quick Access</h2></center>
+      <div class="Q-access">
+        <div class="access"><h4><a href="search.html">Search Catalog</a></h4><p>Quickly search for books, journals, and theses.</p></div>
+        <div class="access"><h4><a href="book.html">Books</a></h4><p>Explore our printed and reference books.</p></div>
+        <div class="access"><h4><a href="jornal.html">Journals</a></h4><p>Access academic and research journals.</p></div>
+        <div class="access"><h4><a href="resource.html">E-Resources</a></h4><p>Find online textbooks, PDFs, and databases.</p></div>
+        <div class="access footer-container">
+          <h3>Follow Us</h3>
+          <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+          <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+          <a href=" https://t.me/wollouniversity_official." target="_blank" >
+          <img src="../Images/tele.png" width="30px" height="30px"> </a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>
+        </div>
+      </div>
+    </section>
+    &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    body {
+    margin:0;
+    background:rgb(240, 235, 235);
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+    /* ===== Announcements / Quick Links ===== */
+    section { max-width: 1000px; margin: auto; padding: 20px; }
+    h3 { color: #003366; margin-bottom: 15px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+    /* ===== Cards for Quick Links ===== */
+    .cards {
+      display: grid;
+      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-left: 0px solid #2ca58d;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    /* ===== Responsive ===== */
+    @media (max-width:768px){
+      .nav-links { flex-direction: column; gap: 10px; }
+      .cards { grid-template-rows: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1> Tertiary Care Campus Library</h1>
+</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="hamburger" onclick="toggleMenu()">☰
+     </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html" class="active">Library Services</a></li>
+      <!-- Resources Dropdown -->
+      <li class="dropdown">
+        <a href="#">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html">Journals</a></li>
+          <li><a href="these.html">Theses</a></li>
+          <li><a href="resource.html">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Quick Access / Highlights -->
+<section>
+  <h3>available book Access</h3>
+  <div class="cards">
+     <div class="card">
+      <a href="../Pdf/DBMS.pdf">
+         <img src="../Images/data.png" width="80" height="100"> 
+        <h4> Fundamentals of Database Systems</a></h4>
+        <p>This book introduces the fundamental concepts necessary for designing, using, and imple- menting database systems and applications.Read more
+1,029 pages</p>
+    </div>
+    <div class="card">
+      <a href="../Pdf/ETHIOPIA HEALTH SECTOR DEVELOPMENT PROGRAMME.pdf">
+         <img src="../Images/hs.png" width="80px" height="100px"> 
+         <h4>Ethiopia-HSTP-II.pdf</a></h4>
+         <p>Page 1. Health Sector Transformation Plan II. HSTP II. 2020/21-2024/25. (2013 EFY - 2017 EFY). February 2021. Page 2. Page 3. CONTENTS. Foreword .Read more
+120 pages</p>
+    </div>
+    <div class="card">
+      <a href="../Pdf/Ethiopia National Reproductive Health Strategy 2006-2015.pdf">
+         <img src="../Images/enr.png" width="80px" height="100px"> 
+        <h4>NATIONAL REPRODUCTIVE HEALTH STRATEGY</a></h4>
+        <p>NATIONAL REPRODUCTIVE HEALTH STRATEGY. 2006-2015. THE SOCIAL AND INSTITUTIONAL. PARAMETERS OF WOMEN'S HEALTH. Women's health is directly affected by the social ...Read more
+46 pages</p>
+    </div>
+    <div class="card">
+     <a href="../Pdf/Tortora Anatomy and physiology 13th edit.pdf">
+         <img src="../Images/tor.png" width="80px" height="100px"> 
+          <h4>Principles of Anatomy and Physiology, 13th Edition</a></h4>
+          <p>by D Tortora · Cited by 7554 — Welcome to the Web site for Principles of Anatomy and Physiology, Thirteenth Edition by Gerard J. Tortora and Bryan H. Derrickson.</p>
+    </div>
+     <div class="card">
+      <a href="../Pdf/Oxford Practice Grammar with Answers.pdf">
+         <img src="../Images/ox.png" width="80px" height="100px"> 
+         <h4>John Eastwood -- Oxford Practice Grammar with Answers</a></h4>
+         <p>Page 1. Page 2. Second edition. Oxford. Practice. Grammar with answers John Eastwood. Oxford University Press. Page 3. Oxford University Press. Great Clarendon ...</p>
+    </div>
+    <div class="card">
+      <a href="../Pdf/SDG.pdf">
+         <img src="../Images/sd.png" width="80px" height="100px"> 
+         <h4>Ethiopia's 2017 SDG Progress Review | PDF</a></h4>
+         <p>The document summarizes Ethiopia's 2017 Voluntary National Review on SDGs, which assessed the country's commitments, ownership and performance trends ...</p>
+    </div>
+    <div class="card">
+      <a href="../Pdf/tutorial.pdf"> 
+        <img src="../Images/to.png" width="80px" height="100px"> 
+        <h4>C++ Language Tutorial</a></h4>
+        <p>C++ Language. These tutorials explain the C++ language from its basics up to the newest features introduced by C++11. Chapters have a practical orientation, ...</p>
+    </div>
+    <div class="card">
+     <a href="../Pdf/RH-strategy-2016.pdf">
+    <img src="../Images/nrh.png" width="80px" height="100px"> 
+        <h4>National Reproductive Health Strategy 2020-2016</a></h4>
+        <p>The Government of Ethiopia is committed to improve and maintain the reproductive health status of women, men and young people in Ethiopia.</p>
+    </div>
+    <div class="card">
+     <a href="https://www.slideshare.net/slideshow/ehealth-100327253/100327253">
+    <img src="../Images/E-Health.png" width="80px" height="100px"> 
+        <h4>E-Health | PDF</a></h4>
+        <p>E-health provides benefits like time savings, insight into one's own health, and lower administrative burdens. However, barriers to its widespread use include ...</p>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer>
+<section class="Quick-access"> 
+  <center><h2>Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+         <h3>Follow Us</h3>
+         <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+         <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+         <a href=" https://t.me/wollouniversity_official." target="_blank" >
+         <img src="../Images/tele.png" width="30px" height="30px"> </a>
+         <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>

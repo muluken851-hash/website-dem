@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Journals | CMHS Library</title>
+  <link rel="stylesheet" href="../Css/index.css">
+  <style>
+    body {
+      margin: 0;
+      background: rgb(240, 235, 235);
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    section { max-width: 1000px; margin: auto; padding: 20px; }
+    h3 { color: #003366; margin-bottom: 15px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+
+    /* ===== Cards for Quick Links ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.5s;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap; /* allow stacking on mobile */
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    .card img {
+      width: 80px;
+      height: 100px;
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width:768px){
+      .nav-links { flex-direction: column; gap: 10px; }
+      .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .card img {
+        margin-bottom: 10px;
+      }
+      .card-content h4, .card-content p, .card-content h5 {
+        text-align: center;
+      }
+    }
+
+    /* Hamburger menu toggle */
+    .nav-links.show {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+  <h1> Tertiary Care Campus Library</h1>
+</header>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="service.html">Library Services</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Resources ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="book.html">Books</a></li>
+          <li><a href="jornal.html" class="active">Journals</a></li>
+          <li><a href="these.html">Theses</a></li>
+          <li><a href="resource.html">E-Resources</a></li>
+        </ul>
+      </li>
+      <li><a href="search.html">Search Catalog</a></li>
+      <li><a href="rule.html">Rules & Regulations</a></li>
+      <li><a href="staff.html">Staff</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section>
+  <h3>journals</h3>
+  <div class="cards">
+
+    <div class="card">
+      <a href="https://abjol.org.et/index.php/ajhs/about">
+        <img src="../Images/jo.png" alt="AJHS Logo">
+      </a>
+      <div class="card-content">
+        <a href="https://abjol.org.et/index.php/ajhs/about">
+          <h4> Abyssinia Journal of Health Sciences</h4>
+        </a>
+        <p>Abyssinia Journal of Health Sciences (AJHS) is a newly established, peer-reviewed, open-access scientific journal published by Wollo University, Ethiopia.
+        The journal aims to provide a platform for the dissemination of high-quality research and scholarly work in the fields of medicine, public health, and health-related sciences.<p> AJHS welcomes original
+     and impactful contributions across a broad spectrum of disciplines 
+     including medicine, public and global health, nursing and midwifery, 
+     pharmacy, laboratory and diagnostic sciences, biomedical sciences, 
+     veterinary public health, zoonotic diseases, environmental and 
+     occupational health, traditional and alternative medicine, digital
+      health, health systems and policies research, and nutrition and
+       dietetics. </p>
+        </p>
+        <h5><a href="https://abjol.org.et/index.php/ajhs/about">https://abjol.org.et/index.php/ajhs/about</a></h5>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://abjol.org.et/index.php/ajst/issue/view/48">
+        <img src="../Images/jou.png" alt="AJST Logo">
+      </a>
+      <div class="card-content">
+        <a href="https://abjol.org.et/index.php/ajst/issue/view/48">
+          <h4>Abyssinia Journal of Science and Technology</h4>
+        </a>
+        <p>Abyssinia Journal of Science and Technology (AJST) is newly established African scientific journal publishing from Wollo University, Ethiopia. It publishes original research articles, short communications, and occasionally review articlesthat
+           generate the significant contribution in the field of science and technology. Its scope covers all aspects of Natural Sciences, 
+           Agricultural Sciences, Medical and Veterinary Sciences & Engineering and Informatics.To qualify for publication, a manuscript must contribute to the
+          understanding of science and technology by presenting either new and original research data as a full research article or in short communication format or review of a particular topic related to science and technology.</p>
+        <h5><a href="https://abjol.org.et/">https://abjol.org.et/</a></h5>
+        <h4>Date of Publishing: Every year first issue in JUNE and the second issue in DECEMBER</h4>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="#">
+        <img src="../Images/jour.png" alt="AJCIK Logo">
+      </a>
+      <div class="card-content">
+        <a href="#"><h4>Abyssinia Journal of Culture and Indigenous Knowledge</h4></a>
+<p>The Abyssinia Journal of Culture and Indigenous Knowledge (AJCIK) is one of the reputable journals published in local languages, culture, indigenous knowledge, and related fields in Ethiopia.</p>
+<p> It is hosted by Wollo University, will release its first issue in January. It will be one of the few pioneer 
+journals in the publication of local languages, culture, indigenous knowledge and related fields in Ethiopia within a short period of time... </p>
+        <h3>Published: 2023-06-30</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="#">
+        <img src="../Images/jour.png" alt="AJEC Logo">
+      </a>
+      <div class="card-content">
+        <a href="#"><h4>Abyssinia Journal of Engineering and Computing</h4></a>
+        <p>Abyssinia Journal of Engineering and Computing (AJEC) is established by Wollo University, Kombolcha Institute of Technology, covering innovative and original research in engineering and computing fields...</p>
+        <h4>DATE OF PUBLISHING</h4>
+        <h5>Every year first issue in January and the second issue in July.</h5>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <section class="Quick-access"> 
+    <center><h2 style="color: white;">Quick Access</h2></center>
+    <div class="Q-access">
+      <div class="access">
+        <h4><a href="search.html">Search Catalog</a> </h4>
+        <p>Quickly search for books, journals, and theses.</p>
+      </div>
+      <div class="access">
+        <h4><a href="book.html">Books</a></h4>
+        <p>Explore our printed and reference books.</p>
+      </div>
+      <div class="access">
+        <h4><a href="jornal.html">Journals</a></h4>
+        <p>Access academic and research journals.</p>
+      </div>
+      <div class="access">
+        <h4><a href="resource.html">E-Resources</a></h4>
+        <p>Find online textbooks, PDFs, and databases.</p>
+      </div>
+      <div class="access">
+        <div class="footer-container">
+          <h3>Follow Us</h3>
+          <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+            <a href=" https://t.me/wollouniversity_official." target="_blank" >
+            <img src="../Images/tele.png" width="30px" height="30px"> </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+</body>
+</html>

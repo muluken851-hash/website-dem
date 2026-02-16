@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Membership Registration Form</title>
+    <link rel="stylesheet" href="../Css/index.css">
+    <style>
+/* Base */
+body{
+    background:#b6bec5;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+.form-container{
+    width:500px;
+    max-width:95%;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #000;
+    padding:15px;
+}
+h3{
+    text-align:center;
+    font-size:14px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+/* Photo */
+.photo-box{
+    width:90px;
+    height:110px;
+    border:1px solid #000;
+    float:right;
+    text-align:center;
+    line-height:110px;
+    font-size:12px;
+}
+.clear{ clear:both; }
+
+/* Rows */
+.row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px;
+}
+label{
+    min-width:140px;
+}
+/* Inputs */
+input, select{
+    padding:4px;
+    border:1px solid #000;
+    font-size:12px;
+}
+select{ flex:1; }
+.department-select{
+    width:155px;
+    flex:none;
+}
+/* User type */
+.user-type{
+    margin:10px 0;
+}
+.user-type input{
+    margin-right:6px;
+}
+/* Agreement */
+.agreement{
+    margin:10px 0;
+}
+/* Signature rows */
+.sign-row{
+    display:flex;
+    gap:10px;
+    margin-bottom:8px;
+}
+.sign-row div{
+    flex:1;
+}
+.sign-row input{
+    width:90%;
+}
+.sign-row label{
+    display:block;
+    margin-bottom:3px;
+}
+/* Button */
+button{
+    display:block;
+    margin:15px auto 0;
+    padding:6px 20px;
+    font-size:13px;
+    border:1px solid #000;
+    background:#e6e6e6;
+    cursor:pointer;
+}
+button:hover{
+    background:#d0d0d0;
+}
+/* Print */
+@media print{
+    body{ background:#fff; }
+    button{ display:none; }
+}
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width:600px){
+    .photo-box{
+        float:none;
+        margin:0 auto 10px;
+    }
+    .row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    label{
+        min-width:100%;
+    }
+    select,input{
+        width:100%;
+    }
+    .department-select{
+        width:100%;
+    }
+    .sign-row{
+        flex-direction:column;
+    }
+    .sign-row input{
+        width:100%;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+<header>
+    <img src="../Images/wu.png" align="left" width="250px" height="80px" >
+    <h1> Tertiary Care Campus Library</h1>
+  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- hamburger -->
+       <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="service.html"  class="active">Library Services</a></li>
+        <li class="dropdown">
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="book.html">Books</a></li>
+            <li><a href="jornal.html">Journals</a></li>
+            <li><a href="these.html">Theses</a></li>
+            <li><a href="resource.html">E-Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="search.html">Search Catalog</a></li>
+        <li><a href="rule.html">Rules & Regulations</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="form-container">
+<form onsubmit="alert('Successfully Registered')">
+    <div class="photo-box">Photo</div>
+    <h3>Tertiary Care Campus Library Membership and Borrower's Pocket Registration Form</h3>
+    <div class="clear"></div>
+
+    <div class="row">
+        <label>Name:</label>
+        <input type="text" required>
+    </div>
+    <div class="row">
+        <label>Sex:</label>
+        <div>
+            <input type="radio" name="sex" required> Male
+            <input type="radio" name="sex" required> Female
+        </div>
+    </div>
+    <div class="row">
+        <label>ID No:</label>
+        <input type="text" required>
+    </div>
+    <div class="row">
+        <label>Institute/College/School:</label>
+        <input type="text" required>
+    </div>
+    <div class="row">
+        <label>Department:</label>
+        <select class="department-select" required>
+            <option value="">Select</option>
+            <option>Anesthesia</option> 
+            <option>Comprehensive Nursing</option>
+            <option>Emergency Nursing</option>
+            <option>Environmental Health</option>
+            <option>Health Informatics</option>                   
+            <option>Medical Laboratory</option>
+            <option>Medicine</option>
+            <option>Midwifery</option>
+            <option>Occupational Health</option>
+            <option>Pediatric Nursing</option>
+            <option>Pharmacy</option>
+            <option>Psychiatry Health</option>
+            <option>Public Health</option>
+            <option>Surgical Nursing</option>   
+        </select>
+    </div>
+    <div class="row">
+        <label>Phone Number:</label>
+        <input type="tel" required>
+    </div>
+    <div class="row">
+        <label>E-mail:</label>
+        <input type="email" required>
+    </div>
+    <div class="user-type">
+        <strong>User Type (Tick one relevant to you)</strong><br><br>
+        <input type="radio" name="userType" required> Academic<br>
+        <input type="radio" name="userType" required> Administrative<br>
+        <input type="radio" name="userType" required> Technical Assistance<br>
+        <input type="radio" name="userType" required> Regular Undergraduate Student<br>
+        <input type="radio" name="userType" required> Extension Undergraduate Student<br>
+        <input type="radio" name="userType" required> Summer Undergraduate Student<br>
+        <input type="radio" name="userType" required> Regular Postgraduate Student<br>
+        <input type="radio" name="userType" required> Summer Postgraduate Student<br>
+        <input type="radio" name="userType" required> Medicine<br>
+        <input type="radio" name="userType" required> External<br>
+        <input type="radio" name="userType" required> Special Need
+    </div>
+    <div class="agreement">
+        <label>
+            <input type="checkbox" required>
+            I agree to abide by the rules and regulations of Wollo University Tertiary Care Campus Library.
+        </label>
+    </div>
+    <div class="sign-row">
+        <div>
+            <label>From No:</label>
+            <input type="text" required>
+        </div>
+        <div>
+            <label>To:</label>
+            <input type="text" required>
+        </div>
+        <div>
+            <label>Sign:</label>
+            <input type="text" required>
+        </div>
+    </div>
+    <div class="sign-row">
+        <div>
+            <label>Date of Issue:</label>
+            <input type="date" required>
+        </div>
+        <div>
+            <label>Issued Name:</label>
+            <input type="text" required>
+        </div>
+        <div>
+            <label>Sign:</label>
+            <input type="text" required>
+        </div>
+    </div>
+    <button type="submit">Register</button>
+</form>
+</div>
+<footer>
+<section class="Quick-access"> 
+  <center><h2 style="color: white;">Quick Access</h2></center>
+  <div class="Q-access">
+    <div class="access">
+      <h4><a href="search.html">Search Catalog</a> </h4>
+      <p>Quickly search for books, journals, and theses.</p>
+    </div>
+    <div class="access">
+      <h4><a href="book.html">Books</a></h4>
+      <p>Explore our printed and reference books.</p>
+    </div>
+    <div class="access">
+      <h4><a href="jornal.html">Journals</a></h4>
+      <p>Access academic and research journals.</p>
+    </div>
+    <div class="access">
+      <h4><a href="resource.html">E-Resources</a></h4>
+      <p>Find online textbooks, PDFs, and databases.</p>
+    </div>
+     <div class="access">
+  <div class="footer-container">
+         <h3>Follow Us</h3>
+         <a href=" https://www.facebook.com/WolloUniversity111/." target="_blank" ><img src="../Images/face.png" width="30px" height="30px"></a>
+         <a href="https://twitter.com" target="_blank" title="Twitter"><img src="../Images/twit.png" width="30px" height="30px"></a>
+         <a href=" https://t.me/wollouniversity_official." target="_blank" >
+         <img src="../Images/tele.png" width="30px" height="30px"> </a>
+         <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="../Images/link.png" width="30px" height="30px"></a>
+        </div>
+    </div>
+  </div>
+</section>
+  &copy; 2025. All Rights Reserved. Wollo University | CMHS Library
+</footer>
+  <script>
+    function toggleMenu(){
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
